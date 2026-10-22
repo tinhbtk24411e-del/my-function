@@ -1,0 +1,345 @@
+/* ============================================================
+   style.qss — Modern Flat Design cho PyQt6
+   Ung dung: Giai Phuong Trinh Bac 1 (ax + b = 0)
+   Bang mau:
+     Primary:   #2563eb  (Royal Blue)
+     Success:   #10b981  (Emerald Green)
+     Warning:   #f59e0b  (Amber)
+     Danger:    #ef4444  (Red)
+     Background:#f1f5f9  (Light Slate)
+     Surface:   #ffffff  (White)
+   ============================================================ */
+
+/* --- QMainWindow & QWidget nen --- */
+QMainWindow {
+    background-color: #f1f5f9;
+}
+
+QWidget {
+    font-family: "Segoe UI", "Roboto", sans-serif;
+    font-size: 13px;
+    color: #1e293b;
+}
+
+QLabel {
+    background: transparent;
+}
+
+/* --- QLineEdit --- */
+QLineEdit {
+    background-color: #ffffff;
+    border: 2px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 10px 14px;
+    color: #1e293b;
+    font-size: 14px;
+    selection-background-color: #2563eb;
+    selection-color: #ffffff;
+}
+
+QLineEdit:hover {
+    border-color: #2563eb;
+    background-color: #f8faff;
+}
+
+QLineEdit:focus {
+    border-color: #2563eb;
+    border-width: 2px;
+    background-color: #ffffff;
+    outline: none;
+}
+
+/* QLineEdit — trang thai loi (highlight do) */
+QLineEdit#error {
+    border: 2px solid #ef4444;
+    background-color: #fef2f2;
+}
+
+QLineEdit#error:hover {
+    border-color: #dc2626;
+    background-color: #fef2f2;
+}
+
+/* --- QPushButton chung --- */
+QPushButton {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-family: "Segoe UI", "Roboto", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+QPushButton:hover {
+    background-color: #1d4ed8;
+}
+
+QPushButton:pressed {
+    background-color: #1e40af;
+}
+
+QPushButton:disabled {
+    background-color: #94a3b8;
+    color: #cbd5e1;
+}
+
+/* --- Nut Giai (Success / Emerald Green) --- */
+QPushButton#btnSolve {
+    background-color: #10b981;
+    font-size: 14px;
+}
+
+QPushButton#btnSolve:hover {
+    background-color: #059669;
+}
+
+QPushButton#btnSolve:pressed {
+    background-color: #047857;
+}
+
+/* --- Nut Xoa (Warning / Amber) --- */
+QPushButton#btnClear {
+    background-color: #f59e0b;
+}
+
+QPushButton#btnClear:hover {
+    background-color: #d97706;
+}
+
+QPushButton#btnClear:pressed {
+    background-color: #b45309;
+}
+
+/* --- Nut Xuat Lich Su (Primary Blue) --- */
+QPushButton#btnExport {
+    background-color: #2563eb;
+}
+
+QPushButton#btnExport:hover {
+    background-color: #1d4ed8;
+}
+
+QPushButton#btnExport:pressed {
+    background-color: #1e40af;
+}
+
+/* --- Nut Xoa Lich Su (Danger / Red) --- */
+QPushButton#btnClearHistory {
+    background-color: #ef4444;
+    font-size: 12px;
+    padding: 6px 14px;
+}
+
+QPushButton#btnClearHistory:hover {
+    background-color: #dc2626;
+}
+
+QPushButton#btnClearHistory:pressed {
+    background-color: #b91c1c;
+}
+
+/* --- Nut Theme Toggle --- */
+QPushButton#btnTheme {
+    background-color: #e2e8f0;
+    color: #1e293b;
+    border-radius: 20px;
+    font-size: 18px;
+    padding: 6px;
+    border: 2px solid #cbd5e1;
+}
+
+QPushButton#btnTheme:hover {
+    background-color: #cbd5e1;
+    border-color: #94a3b8;
+}
+
+QPushButton#btnTheme:pressed {
+    background-color: #94a3b8;
+}
+
+/* --- QFrame ket qua (Card noi bat) --- */
+QFrame#frameResult {
+    background-color: #eff6ff;
+    border: 2px solid #93c5fd;
+    border-radius: 12px;
+}
+
+QLabel#lblResult {
+    font-family: "Segoe UI", "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1d4ed8;
+}
+
+QLabel#lblResultTitle {
+    color: #2563eb;
+}
+
+/* --- QLabel phuong trinh preview --- */
+QLabel#lblEquation {
+    color: #2563eb;
+}
+
+/* --- QLabel tieu de cac section --- */
+QLabel#lblStepsTitle,
+QLabel#lblInfoTitle,
+QLabel#lblHistoryTitle {
+    color: #1e293b;
+}
+
+/* --- QTextBrowser (loi giai chi tiet & thong tin) --- */
+QTextBrowser {
+    background-color: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "Segoe UI", "Roboto", sans-serif;
+    font-size: 12px;
+    color: #334155;
+    line-height: 1.5;
+}
+
+QTextBrowser:hover {
+    border-color: #cbd5e1;
+}
+
+/* --- QListWidget (lich su) --- */
+QListWidget {
+    background-color: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 12px;
+    color: #334155;
+}
+
+QListWidget::item {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+QListWidget::item:hover {
+    background-color: #f1f5f9;
+}
+
+QListWidget::item:selected {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+/* --- QScrollBar --- */
+QScrollBar:vertical {
+    background-color: #f1f5f9;
+    width: 10px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #cbd5e1;
+    border-radius: 5px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #94a3b8;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+/* --- QFrame (khung nhap lieu) --- */
+QFrame#frameInput {
+    background-color: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+/* --- QMenuBar --- */
+QMenuBar {
+    background-color: #ffffff;
+    color: #1e293b;
+    font-size: 13px;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 4px 8px;
+}
+
+QMenuBar::item {
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+QMenuBar::item:selected {
+    background-color: #f1f5f9;
+}
+
+QMenu {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+QMenu::item {
+    padding: 8px 24px;
+    border-radius: 4px;
+}
+
+QMenu::item:selected {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+QMenu::separator {
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 4px 12px;
+}
+
+/* --- QStatusBar --- */
+QStatusBar {
+    background-color: #ffffff;
+    color: #64748b;
+    font-size: 11px;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* --- QMessageBox --- */
+QMessageBox {
+    background-color: #ffffff;
+}
+
+QMessageBox QLabel {
+    color: #1e293b;
+    font-size: 13px;
+}
+
+QMessageBox QPushButton {
+    min-width: 80px;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+/* --- QFileDialog --- */
+QFileDialog {
+    background-color: #ffffff;
+}
+
+QFileDialog QLabel {
+    color: #1e293b;
+}
+
+QFileDialog QPushButton {
+    min-width: 64px;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
